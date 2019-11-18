@@ -1,0 +1,57 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  font-weight: 300;
+  line-height: 1.6;
+  min-width: 320px;
+  letter-spacing: 0.1rem;
+  font-family: 'PT Mono', 'Roboto Mono', monospace;
+}
+
+img {
+  width: 100%;
+  background-size: cover;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: currentColor;
+}
+
+.App {
+  width: 100%;
+}
+
+.info {
+  text-transform: uppercase;
+  padding: 2rem;
+  font-size: 3rem;
+  display: flex;
+  justify-content: space-between;
+  margin: 5rem 20% 3rem;
+
+  &__item {
+    border-bottom: 1px solid transparent;
+    transition: 0.3s all ease-out;
+
+    &:hover {
+      border-bottom: 1px solid #000;
+    }
+  }
+}

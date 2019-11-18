@@ -1,0 +1,26 @@
+.canvas {
+    &-wrapper {
+        height: 80vh;
+        background: black;
+        position: relative;
+    }
+
+    &-text {
+        padding: 2rem;
+        color: white;
+        position: absolute;
+        bottom: 0;
+        left: 20%;
+
+        & h3 {
+            font-size: 1.8rem;
+            font-weight: 300;
+        }
+
+        & h1 {
+            text-transform: uppercase;
+            font-size: 6.4rem;
+            font-weight: 700;
+        }
+    }
+}
