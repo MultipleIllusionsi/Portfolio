@@ -1,0 +1,29 @@
+.footer {
+    text-transform: uppercase;
+    height: 20vh;
+    padding: 2rem;
+    font-size: 3rem;
+    display: flex;
+    justify-content: space-between;
+    padding: 5rem 20% 3rem;
+
+    &__item {
+        border-bottom: 0.15rem solid transparent;
+        transition: 0.3s all ease-out;
+        position: relative;
+
+        &:hover {
+            border-bottom: 0.15rem solid #000;
+        }
+    }
+
+    &.homepage {
+        color: black;
+        background: white;
+    }
+
+    &.other {
+        color: white;
+        background: black;
+    }
+}

@@ -1,0 +1,30 @@
+.page-about {
+    max-width: 100rem;
+    margin: 0 auto;
+}
+
+.headings {
+    margin-top: 10vh;
+
+    & h3 {
+        font-size: 1.8rem;
+        font-weight: 300;
+    }
+
+    & h1 {
+        text-transform: uppercase;
+        font-size: 6.4rem;
+        font-weight: 700;
+    }
+}
+
+.bio {
+    margin-top: 10rem;
+    font-size: 1.8rem;
+}
+
+.photo {
+    margin-top: 10rem;
+    width: 50%;
+    margin-left: auto;
+}
