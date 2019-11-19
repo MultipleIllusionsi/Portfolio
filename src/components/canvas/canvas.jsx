@@ -1,13 +1,20 @@
 import React, { Component } from "react";
 
+import { throttle } from "lodash";
+
 import "./canvas.scss";
 
 class Canvas extends Component {
-  canva = React.createRef();
-  state = {
-    width: null,
-    height: null
-  };
+  constructor(props) {
+    super(props);
+
+    this.canva = React.createRef();
+    this.state = {
+      width: null,
+      height: null
+    };
+    this.moveHandlerThrottled = throttle(this.moveHandler, 50);
+  }
 
   componentDidMount() {
     this.setState({
@@ -60,7 +67,10 @@ class Canvas extends Component {
     return (
       <section className="canvas-wrapper">
         <canvas
-          onMouseMove={this.moveHandler}
+          onMouseMove={e => {
+            e.persist();
+            this.moveHandlerThrottled(e);
+          }}
           ref={this.canva}
           className="canvas"
         ></canvas>

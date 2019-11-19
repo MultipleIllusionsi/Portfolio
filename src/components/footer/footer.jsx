@@ -9,12 +9,14 @@ const Footer = props => {
   return (
     <footer className={`footer ${classes}`}>
       {props.extra && <div>extra</div>}
-      <Link className="info__item" to="/work">
-        Work
-      </Link>
-      <Link className="info__item" to="/about">
-        About
-      </Link>
+      <ul className="footer-list">
+        <li className="footer-list__item">
+          <Link to="/work">Work</Link>
+        </li>
+        <li className="footer-list__item">
+          <Link to="/about">About</Link>
+        </li>
+      </ul>
     </footer>
   );
 };

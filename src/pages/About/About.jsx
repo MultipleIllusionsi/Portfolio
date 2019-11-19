@@ -1,6 +1,7 @@
 import React from "react";
 
 import "./About.scss";
+import PersonalPhoto from "../../assets/personal-photo.jpg";
 
 const About = () => {
   return (
@@ -13,10 +14,7 @@ const About = () => {
         <p>I'm a 22 years old frontend developer from Yekaterinburg</p>
       </div>
       <div className="photo">
-        <img
-          src="https://sun9-45.userapi.com/c844723/v844723604/1e3053/LO3UImQ6tFk.jpg"
-          alt=""
-        />
+        <img src={PersonalPhoto} alt="" />
       </div>
     </div>
   );

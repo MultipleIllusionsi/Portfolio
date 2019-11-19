@@ -1,19 +1,34 @@
 .footer {
     text-transform: uppercase;
     height: 20vh;
-    padding: 2rem;
     font-size: 3rem;
-    display: flex;
-    justify-content: space-between;
     padding: 5rem 20% 3rem;
 
-    &__item {
-        border-bottom: 0.15rem solid transparent;
-        transition: 0.3s all ease-out;
-        position: relative;
+    &-list {
+        display: flex;
+        justify-content: space-between;
 
-        &:hover {
-            border-bottom: 0.15rem solid #000;
+        &__item {
+            position: relative;
+
+            &::after {
+                transition: 0.3s all ease-out;
+                content: "";
+                display: block;
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                left: -5%;
+                height: 0.15rem;
+                width: 0;
+                background-color: black;
+            }
+
+            &:hover {
+                &::after {
+                    width: 110%;
+                }
+            }
         }
     }
 
