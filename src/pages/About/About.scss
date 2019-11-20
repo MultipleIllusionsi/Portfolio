@@ -1,5 +1,7 @@
 .page-about {
     max-width: 100rem;
+    width: 60vw;
+    min-width: 32rem;
     margin: 0 auto;
 }
 
@@ -22,7 +24,11 @@
 
 .bio {
     margin-top: 10rem;
-    font-size: 1.8rem;
+    font-size: 1.9rem;
+
+    &>p {
+        margin-bottom: 2rem;
+    }
 }
 
 .photo {

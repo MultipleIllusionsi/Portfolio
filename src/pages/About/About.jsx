@@ -49,7 +49,16 @@ class About extends React.PureComponent {
             <h1>Sergey Zakharov</h1>
           </div>
           <div className="bio">
-            <p>I'm a 22 years old frontend developer from Yekaterinburg</p>
+            <p>
+              I'm a 22-year-old frontend developer from Yekaterinburg, Russia,
+              graduated from a Bachelor in Information Systems and Technologies.
+            </p>
+            <p>
+              I am passionate about creating beautiful and original web
+              applications. I also take a very keen interest on many aspects of
+              development, such as backend and web design.
+            </p>
+            <p>Currently looking for opportunities in Russia.</p>
           </div>
           <div className="photo">
             <Link to="/">
