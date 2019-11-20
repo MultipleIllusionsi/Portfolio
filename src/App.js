@@ -3,7 +3,7 @@ import { Route, Switch } from "react-router-dom";
 
 import "./App.scss";
 
-import Footer from "./components/footer/footer";
+// import Footer from "./components/footer/footer";
 
 const Homepage = lazy(() => import("./pages/Homepage/Homepage"));
 const About = lazy(() => import("./pages/About/About"));
@@ -17,7 +17,7 @@ const App = () => (
         {/* <Route exact path="/work/:id" component={Work} /> */}
       </Suspense>
     </Switch>
-    <Footer />
+    {/* <Footer /> */}
   </>
 );
 export default App;

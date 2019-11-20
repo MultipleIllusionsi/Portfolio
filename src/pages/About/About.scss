@@ -5,6 +5,8 @@
 
 .headings {
     margin-top: 10vh;
+    // transition: 1s all ease-out;
+    will-change: transform, opacity;
 
     & h3 {
         font-size: 1.8rem;

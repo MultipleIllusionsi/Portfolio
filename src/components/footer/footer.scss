@@ -19,7 +19,7 @@
                 top: 50%;
                 transform: translateY(-50%);
                 left: -5%;
-                height: 0.15rem;
+                height: 0.2rem;
                 width: 0;
                 background-color: black;
             }
@@ -40,5 +40,17 @@
     &.other {
         color: white;
         background: black;
+
+        & .footer-list__item::after {
+            background-color: white;
+        }
+    }
+}
+
+.active-link {
+    & span {
+        &::after {
+            width: 110%;
+        }
     }
 }

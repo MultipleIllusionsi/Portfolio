@@ -7,11 +7,11 @@ import "./canvas.scss";
 class Canvas extends Component {
   constructor(props) {
     super(props);
-
     this.canva = React.createRef();
     this.state = {
       width: null,
-      height: null
+      height: null,
+      ready: false
     };
     this.moveHandlerThrottled = throttle(this.moveHandler, 50);
   }
@@ -21,26 +21,12 @@ class Canvas extends Component {
       width: this.canva.current.clientWidth,
       height: this.canva.current.clientHeight
     });
+    setTimeout(() => {
+      this.setState({ ready: true });
+    }, 1500);
   }
 
-  componentDidUpdate() {
-    this.paint();
-  }
-
-  paint() {
-    const context = this.canva.current.getContext("2d");
-    context.clearRect(0, 0, this.state.width, this.state.height);
-    context.save();
-
-    const g = context.createRadialGradient(0, 0, 0, 0, 0, 600);
-    g.addColorStop(0, "#000");
-    g.addColorStop(1, "rgb(" + 255 + ", " + 255 + ", " + 255 + ")");
-
-    context.fillStyle = g;
-
-    context.fillRect(0, 0, this.state.width, this.state.height);
-    context.save();
-  }
+  // componentDidUpdate() {}
 
   moveHandler = e => {
     const w = this.state.width;
@@ -67,10 +53,14 @@ class Canvas extends Component {
     return (
       <section className="canvas-wrapper">
         <canvas
-          onMouseMove={e => {
-            e.persist();
-            this.moveHandlerThrottled(e);
-          }}
+          onMouseMove={
+            this.state.ready
+              ? e => {
+                  e.persist();
+                  this.moveHandlerThrottled(e);
+                }
+              : undefined
+          }
           ref={this.canva}
           className="canvas"
         ></canvas>

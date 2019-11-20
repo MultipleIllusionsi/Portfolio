@@ -1,0 +1,25 @@
+.footer-appear {
+    display: none;
+    opacity: 0;
+    overflow: hidden;
+}
+
+// .footer-appear-active {}
+
+.footer-appear-done {
+    display: block;
+    transition: 2s all ease-out;
+    opacity: 1;
+}
+
+// .footer-enter-done {
+// }
+
+.canvas-appear {
+    height: 100vh;
+}
+
+.canvas-appear-done {
+    height: 80vh;
+    transition: 1s all ease-out;
+}
