@@ -7,7 +7,7 @@ import PersonalPhoto from "../../assets/personal-photo.jpg";
 
 import "./About.scss";
 
-class About extends React.PureComponent {
+class About extends React.Component {
   state = {
     position: null
   };

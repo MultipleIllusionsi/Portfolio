@@ -1,25 +1,46 @@
+// .footer-appear-active {}
+// .footer-enter-done {}
+
 .footer-appear {
-    display: none;
     opacity: 0;
-    overflow: hidden;
 }
 
-// .footer-appear-active {}
 
 .footer-appear-done {
-    display: block;
     transition: 2s all ease-out;
     opacity: 1;
 }
 
-// .footer-enter-done {
-// }
-
 .canvas-appear {
-    height: 100vh;
+    & .canvas-text {
+        transform: translateY(5vh);
+        opacity: 0;
+    }
 }
 
 .canvas-appear-done {
-    height: 80vh;
-    transition: 1s all ease-out;
+    & .canvas-text {
+        transition: 3s opacity ease-out, 0.5s transform ease-in;
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.animBc {
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10000;
+    transition: 1.5s all ease-in;
+
+    &-appear {
+        transform: translateY(0);
+
+        &-done {
+            transform: translateY(-105vh);
+        }
+    }
 }

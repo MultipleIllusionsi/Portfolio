@@ -12,9 +12,20 @@ const Homepage = props => {
     <div className="home-page">
       <TransitionGroup>
         <CSSTransition
-          classNames="canvas"
+          classNames="animBc"
           appear
           timeout={0}
+          key={props.location.pathname}
+        >
+          <div className="animBc"></div>
+        </CSSTransition>
+      </TransitionGroup>
+
+      <TransitionGroup>
+        <CSSTransition
+          classNames="canvas"
+          appear
+          timeout={1200}
           key={props.location.pathname}
         >
           <Canvas />
@@ -25,7 +36,7 @@ const Homepage = props => {
         <CSSTransition
           classNames="footer"
           appear
-          timeout={1500}
+          timeout={2000}
           key={props.location.pathname}
         >
           <Footer />
