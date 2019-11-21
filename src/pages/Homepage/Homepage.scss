@@ -25,22 +25,3 @@
         opacity: 1;
     }
 }
-
-.animBc {
-    width: 100vw;
-    height: 100vh;
-    background-color: black;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 10000;
-    transition: 1.5s all ease-in;
-
-    &-appear {
-        transform: translateY(0);
-
-        &-done {
-            transform: translateY(-105vh);
-        }
-    }
-}

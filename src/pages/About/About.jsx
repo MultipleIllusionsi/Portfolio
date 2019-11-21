@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { CSSTransition, TransitionGroup } from "react-transition-group";
 
 import Footer from "../../components/footer/footer";
 
@@ -38,10 +39,20 @@ class About extends React.Component {
     return (
       <>
         <div onScroll={this.listenToScroll} className="page-about">
+          <TransitionGroup>
+            <CSSTransition
+              classNames="appearBlock"
+              appear
+              timeout={0}
+              key={this.props.location.pathname}
+            >
+              <div className="appearBlock white"></div>
+            </CSSTransition>
+          </TransitionGroup>
           <div
             style={{
-              transform: `translateY(${scrolledPercent * 200}%)`,
-              opacity: `${1 - scrolledPercent}`
+              transform: `translateY(${scrolledPercent * 400}%)`,
+              opacity: `${1 - scrolledPercent * 2.3}`
             }}
             className={`headings`}
           >

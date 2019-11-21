@@ -1,0 +1,10 @@
+.page-work {
+    margin-top: 15vh;
+    // overflow: hidden;
+
+    & .work-list {
+        max-width: 120rem;
+        min-width: 32rem;
+        margin: 0 auto 15vh;
+    }
+}

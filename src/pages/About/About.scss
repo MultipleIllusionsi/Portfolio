@@ -1,12 +1,12 @@
 .page-about {
     max-width: 100rem;
-    width: 60vw;
     min-width: 32rem;
     margin: 0 auto;
+    overflow: hidden;
 }
 
 .headings {
-    margin-top: 10vh;
+    margin-top: 20vh;
     // transition: 1s all ease-out;
     will-change: transform, opacity;
 
@@ -23,7 +23,7 @@
 }
 
 .bio {
-    margin-top: 10rem;
+    margin-top: 12vh;
     font-size: 1.9rem;
 
     &>p {

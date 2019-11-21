@@ -7,6 +7,10 @@ import "./App.scss";
 
 const Homepage = lazy(() => import("./pages/Homepage/Homepage"));
 const About = lazy(() => import("./pages/About/About"));
+const Work = lazy(() => import("./pages/Work/Work"));
+const IndividualWork = lazy(() =>
+  import("./pages/IndividualWork/IndividualWork")
+);
 
 const App = () => (
   <>
@@ -14,7 +18,8 @@ const App = () => (
       <Suspense fallback={<div>loading...</div>}>
         <Route exact path="/" component={Homepage} />
         <Route exact path="/about" component={About} />
-        {/* <Route exact path="/work/:id" component={Work} /> */}
+        <Route exact path="/work" component={Work} />
+        <Route exact path="/work/:title" component={IndividualWork} />
       </Suspense>
     </Switch>
     {/* <Footer /> */}

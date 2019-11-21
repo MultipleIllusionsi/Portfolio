@@ -12,12 +12,12 @@ const Homepage = props => {
     <div className="home-page">
       <TransitionGroup>
         <CSSTransition
-          classNames="animBc"
+          classNames="appearBlock"
           appear
           timeout={0}
           key={props.location.pathname}
         >
-          <div className="animBc"></div>
+          <div className="appearBlock full black"></div>
         </CSSTransition>
       </TransitionGroup>
 
