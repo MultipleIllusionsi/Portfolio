@@ -1,19 +1,65 @@
 .IndividualWork-page {
-    overflow: hidden;
     margin-top: 15vh;
 
+    .page-content>* {
+        padding: 0 7vw;
+    }
+
     & h1 {
-        font-size: 5rem;
+        font-size: 6rem;
+        font-family: "Roboto-mono", sans-serif;
+        font-weight: 800;
     }
 
     & p {
         font-size: 3rem;
         margin: 5rem 0;
     }
+
+    & img {
+        margin: 7.5vh 0;
+        padding: 0 !important;
+        border: 1px solid rgb(180, 180, 180);
+    }
+
+    .link {
+        &-wrapper {
+            margin: 7.5vh 0;
+
+            & a {
+                display: block;
+                text-align: center;
+            }
+        }
+
+        &-style {
+            font-size: 4rem;
+            font-weight: 900;
+            position: relative;
+
+            &::after {
+                transition: 0.2s all ease-out;
+                content: "";
+                display: block;
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                left: -5%;
+                height: 0.2rem;
+                width: 0;
+                background-color: black;
+            }
+
+            &:hover {
+                &::after {
+                    width: 110%;
+                }
+            }
+        }
+    }
 }
 
 .stack-list {
-    margin: 5rem 0;
     font-size: 3.5rem;
     font-weight: 900;
 

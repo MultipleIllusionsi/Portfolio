@@ -11,11 +11,14 @@ const IndividualWork = ({ match: { params } }) => {
   const {
     title,
     preview,
+    link,
     stack,
     describe_one,
     describe_two,
     image_one,
-    image_two
+    image_two,
+    image_three,
+    image_four
   } = data[0];
   return (
     <div className="IndividualWork-page">
@@ -23,13 +26,23 @@ const IndividualWork = ({ match: { params } }) => {
       <div className="page-content">
         <h1>{title}</h1>
         <p>{describe_one}</p>
-        <img src={preview} alt="" />
+        <img src={image_one} alt="" />
+        <img src={image_two} alt="" />
         <ul className="stack-list">
           Stack:
-          {stack.map(item => (
-            <li className="stack-list__item">{item}</li>
+          {stack.map((item, index) => (
+            <li key={index} className="stack-list__item">
+              {item}
+            </li>
           ))}
         </ul>
+        <img src={image_three} alt="" />
+        <img src={image_four} alt="" />
+        <div className="link-wrapper">
+          <a target="blank" href={link}>
+            <span className="link-style">Link</span>
+          </a>
+        </div>
       </div>
       <Footer />
     </div>
