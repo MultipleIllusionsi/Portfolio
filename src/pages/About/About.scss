@@ -3,36 +3,41 @@
     min-width: 32rem;
     margin: 0 auto;
     overflow: hidden;
-}
 
-.headings {
-    margin-top: 20vh;
-    // transition: 1s all ease-out;
-    will-change: transform, opacity;
+    &__headings {
+        margin-top: 20vh;
+        // transition: 1s all ease-out;
+        will-change: transform, opacity;
 
-    & h3 {
-        font-size: 1.8rem;
-        font-weight: 300;
+        & h3 {
+            font-size: 1.8rem;
+            font-weight: 300;
+        }
+
+        & h1 {
+            text-transform: uppercase;
+            font-size: 6.4rem;
+            font-weight: 700;
+        }
     }
 
-    & h1 {
-        text-transform: uppercase;
-        font-size: 6.4rem;
-        font-weight: 700;
+    &__bio {
+        margin-top: 12vh;
+        font-size: 1.9rem;
+
+        &>p {
+            margin-bottom: 2rem;
+        }
     }
-}
 
-.bio {
-    margin-top: 12vh;
-    font-size: 1.9rem;
+    &__photo {
+        margin-top: 10rem;
+        width: 50%;
+        margin-left: auto;
 
-    &>p {
-        margin-bottom: 2rem;
+        & a {
+            display: block;
+        }
     }
-}
 
-.photo {
-    margin-top: 10rem;
-    width: 50%;
-    margin-left: auto;
 }

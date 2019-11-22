@@ -1,25 +1,36 @@
 import React from "react";
-import { CSSTransition, TransitionGroup } from "react-transition-group";
 
 import Footer from "../../components/footer/footer";
+import InitialAnimation from "../../components/InitialAnimation/InitialAnimation";
+import listOfWorks from "../../assets/static/listOfWorks";
 
 import "./IndividualWork.scss";
 
-const IndividualWork = props => {
-  console.log("props", props);
+const IndividualWork = ({ match: { params } }) => {
+  let data = listOfWorks.filter(work => work.title === params.title);
+  const {
+    title,
+    preview,
+    stack,
+    describe_one,
+    describe_two,
+    image_one,
+    image_two
+  } = data[0];
   return (
     <div className="IndividualWork-page">
-      <TransitionGroup>
-        <CSSTransition
-          classNames="appearBlock"
-          appear
-          timeout={0}
-          key={props.location.pathname}
-        >
-          <div className="appearBlock white"></div>
-        </CSSTransition>
-      </TransitionGroup>
-      Individual work for {props.match.params.title}
+      <InitialAnimation color="white" size="full" />
+      <div className="page-content">
+        <h1>{title}</h1>
+        <p>{describe_one}</p>
+        <img src={preview} alt="" />
+        <ul className="stack-list">
+          Stack:
+          {stack.map(item => (
+            <li className="stack-list__item">{item}</li>
+          ))}
+        </ul>
+      </div>
       <Footer />
     </div>
   );

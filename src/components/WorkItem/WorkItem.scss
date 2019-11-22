@@ -46,6 +46,7 @@
         }
 
         &__img {
+            pointer-events: none;
             position: absolute;
             top: -50%;
             right: 0;

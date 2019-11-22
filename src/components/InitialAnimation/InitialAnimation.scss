@@ -1,0 +1,31 @@
+.appearBlock {
+    margin: 0;
+    padding: 0;
+    width: 99vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10000;
+    transition: 1.5s all ease-in;
+
+    &.full {
+        width: 100vw;
+    }
+
+    &.black {
+        background-color: black;
+    }
+
+    &.white {
+        background-color: white;
+    }
+
+    &-appear {
+        transform: translateY(0);
+
+        &-done {
+            transform: translateY(-105vh);
+        }
+    }
+}

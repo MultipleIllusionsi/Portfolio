@@ -1,6 +1,30 @@
 .IndividualWork-page {
     overflow: hidden;
     margin-top: 15vh;
-    font-size: 5rem;
-    text-align: center;
+
+    & h1 {
+        font-size: 5rem;
+    }
+
+    & p {
+        font-size: 3rem;
+        margin: 5rem 0;
+    }
+}
+
+.stack-list {
+    margin: 5rem 0;
+    font-size: 3.5rem;
+    font-weight: 900;
+
+    &__item {
+        list-style: inside;
+        font-size: 2.5rem;
+        font-weight: 400;
+    }
+}
+
+.page-content {
+    max-width: 120rem;
+    margin: 0 auto;
 }

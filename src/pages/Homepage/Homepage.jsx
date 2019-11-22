@@ -3,6 +3,7 @@ import { CSSTransition, TransitionGroup } from "react-transition-group";
 
 import Canvas from "../../components/canvas/canvas";
 import Footer from "../../components/footer/footer";
+import InitialAnimation from "../../components/InitialAnimation/InitialAnimation";
 
 import "./Homepage.scss";
 
@@ -10,16 +11,7 @@ const Homepage = props => {
   console.log("this.props", props);
   return (
     <div className="home-page">
-      <TransitionGroup>
-        <CSSTransition
-          classNames="appearBlock"
-          appear
-          timeout={0}
-          key={props.location.pathname}
-        >
-          <div className="appearBlock full black"></div>
-        </CSSTransition>
-      </TransitionGroup>
+      <InitialAnimation color="black" size="full" />
 
       <TransitionGroup>
         <CSSTransition
