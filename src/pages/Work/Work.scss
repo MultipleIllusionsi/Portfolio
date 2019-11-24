@@ -8,3 +8,15 @@
         margin: 0 auto 15vh;
     }
 }
+
+.PageWork-appear {
+    opacity: 0;
+    transform: translateY(70vh);
+}
+
+
+.PageWork-appear-done {
+    transition: 1.5s all cubic-bezier(0.68, -0.55, 0.265, 1.4);
+    transform: translateY(0);
+    opacity: 1;
+}

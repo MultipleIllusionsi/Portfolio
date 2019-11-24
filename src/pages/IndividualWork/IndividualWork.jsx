@@ -3,6 +3,7 @@ import React from "react";
 import Footer from "../../components/footer/footer";
 import InitialAnimation from "../../components/InitialAnimation/InitialAnimation";
 import listOfWorks from "../../assets/static/listOfWorks";
+import AppearAnimation from "../../components/AppearAnimation/AppearAnimation";
 
 import "./IndividualWork.scss";
 
@@ -24,7 +25,9 @@ const IndividualWork = ({ match: { params } }) => {
     <div className="IndividualWork-page">
       <InitialAnimation color="white" size="full" />
       <div className="page-content">
-        <h1>{title}</h1>
+        <AppearAnimation classes={"IndividualWork"} timeout={800}>
+          <h1>{title}</h1>
+        </AppearAnimation>
         <p>{describe_one}</p>
         <img src={image_one} alt="" />
         <img src={image_two} alt="" />

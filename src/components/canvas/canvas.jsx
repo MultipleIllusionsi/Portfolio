@@ -13,7 +13,7 @@ class Canvas extends Component {
       height: null,
       ready: false
     };
-    this.moveHandlerThrottled = throttle(this.moveHandler, 50);
+    this.moveHandlerThrottled = throttle(this.moveHandler, 40);
   }
 
   componentDidMount() {

@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 
 import Footer from "../../components/footer/footer";
 import InitialAnimation from "../../components/InitialAnimation/InitialAnimation";
+import AppearAnimation from "../../components/AppearAnimation/AppearAnimation";
 import PersonalPhoto from "../../assets/personal-photo.jpg";
 
 import "./About.scss";
@@ -40,34 +41,44 @@ class About extends React.Component {
     return (
       <>
         <div onScroll={this.listenToScroll} className="page-about">
-          <InitialAnimation color="white" />
-          <div
-            style={{
-              transform: `translateY(${scrolledPercent * 400}%)`,
-              opacity: `${1 - scrolledPercent * 2.3}`
-            }}
-            className={`page-about__headings`}
-          >
-            <h3>Frontend Developer</h3>
-            <h1>Sergey Zakharov</h1>
-          </div>
-          <div className="page-about__bio">
-            <p>
-              I'm a 22-year-old frontend developer from Yekaterinburg, Russia,
-              graduated from a Bachelor in Information Systems and Technologies.
-            </p>
-            <p>
-              I am passionate about creating beautiful and original web
-              applications. I also take a very keen interest on many aspects of
-              development, such as backend and web design.
-            </p>
-            <p>Currently looking for opportunities in Russia.</p>
-          </div>
-          <div className="page-about__photo">
-            <Link to="/">
-              <img src={PersonalPhoto} alt="sergey zakharov" />
-            </Link>
-          </div>
+          {/* <InitialAnimation color="white" /> */}
+
+          <AppearAnimation classes={"PageAbout"} timeout={0}>
+            <div
+              style={{
+                transform: `translateY(${scrolledPercent * 400}%)`,
+                opacity: `${1 - scrolledPercent * 2.3}`
+              }}
+              className={`page-about__headings`}
+            >
+              <h3>Frontend Developer</h3>
+              <h1>Sergey Zakharov</h1>
+            </div>
+          </AppearAnimation>
+
+          <AppearAnimation classes={"PageAbout"} timeout={200}>
+            <div className="page-about__bio">
+              <p>
+                I'm a 22-year-old frontend developer from Yekaterinburg, Russia,
+                graduated from a Bachelor in Information Systems and
+                Technologies.
+              </p>
+              <p>
+                I am passionate about creating beautiful and original web
+                applications. I also take a very keen interest on many aspects
+                of development, such as backend and web design.
+              </p>
+              <p>Currently looking for opportunities in Russia.</p>
+            </div>
+          </AppearAnimation>
+
+          <AppearAnimation classes={"PageAbout"} timeout={400}>
+            <div className="page-about__photo">
+              <Link to="/">
+                <img src={PersonalPhoto} alt="sergey zakharov" />
+              </Link>
+            </div>
+          </AppearAnimation>
         </div>
         <Footer />
       </>
