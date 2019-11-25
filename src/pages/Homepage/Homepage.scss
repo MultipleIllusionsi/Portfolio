@@ -25,3 +25,18 @@
         opacity: 1;
     }
 }
+
+.canvas-exit {
+    & .canvas-text {
+        transition: 3s all;
+        opacity: 1;
+    }
+}
+
+.canvas-exit-active {
+    & .canvas-text {
+        transition: 3s all;
+        opacity: 0;
+        transform: translateY(50rem);
+    }
+}

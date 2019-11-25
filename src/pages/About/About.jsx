@@ -10,7 +10,7 @@ import "./About.scss";
 
 class About extends React.Component {
   state = {
-    position: null
+    scroll: null
   };
 
   componentDidMount() {
@@ -28,26 +28,39 @@ class About extends React.Component {
       document.documentElement.scrollHeight -
       document.documentElement.clientHeight;
     const scrolledPercent = currScroll / height;
+
+    // switch (scrolledPercent > 0) {
+    //   case scrolledPercent > 0.5:
+    //     document.body.style.backgroundColor = "#f7f1e3";
+    //     break;
+    //   case scrolledPercent < 0.5:
+    //     document.body.style.backgroundColor = "white";
+    //     break;
+    //   default:
+    //     break;
+    // }
+
     if (scrolledPercent > 0.5) {
       return;
     }
+
     console.log("scrolledPercent", scrolledPercent);
-    this.setState({ scrolledPercent: scrolledPercent });
+    this.setState({ scroll: scrolledPercent });
   };
 
   render() {
     console.log("render from about page");
-    const { scrolledPercent } = this.state;
+    const { scroll } = this.state;
     return (
       <>
         <div onScroll={this.listenToScroll} className="page-about">
           {/* <InitialAnimation color="white" /> */}
 
-          <AppearAnimation classes={"PageAbout"} timeout={0}>
+          <AppearAnimation classes={"PageAbout-heading"} timeout={0}>
             <div
               style={{
-                transform: `translateY(${scrolledPercent * 400}%)`,
-                opacity: `${1 - scrolledPercent * 2.3}`
+                transform: `translateY(${scroll * 400}%)`,
+                opacity: `${1 - scroll * 2.3}`
               }}
               className={`page-about__headings`}
             >
@@ -72,12 +85,27 @@ class About extends React.Component {
             </div>
           </AppearAnimation>
 
-          <AppearAnimation classes={"PageAbout"} timeout={400}>
-            <div className="page-about__photo">
-              <Link to="/">
-                <img src={PersonalPhoto} alt="sergey zakharov" />
-              </Link>
-            </div>
+          <AppearAnimation classes="PageAbout" timeout={400}>
+            <section className="page-about__skills">
+              <div className="page-about__skills-list">
+                <h2>Skills</h2>
+                <ul>
+                  <li>HTML5 (Pug)</li>
+                  <li>CSS3 (SCSS), CSS in JS</li>
+                  <li>JavaScript (up to ES10)</li>
+                  <li>React (incl. knowledge of the latest updates)</li>
+                  <li>Redux (as well Async Redux)</li>
+                  <li>Firebase</li>
+                  <li>Git, Github</li>
+                  <li>Webpack, NPM, Parcel</li>
+                </ul>
+              </div>
+              <div className="page-about__skills-photo">
+                <Link to="/">
+                  <img src={PersonalPhoto} alt="sergey zakharov" />
+                </Link>
+              </div>
+            </section>
           </AppearAnimation>
         </div>
         <Footer />

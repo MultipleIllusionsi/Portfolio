@@ -6,7 +6,6 @@
 
     &__headings {
         margin-top: 20vh;
-        // transition: 1s all ease-out;
         will-change: transform, opacity;
 
         & h3 {
@@ -15,28 +14,51 @@
         }
 
         & h1 {
-            text-transform: uppercase;
             font-size: 6.4rem;
-            font-weight: 700;
+            font-family: "Roboto-mono", sans-serif;
+            font-weight: 800;
+            text-transform: uppercase;
         }
     }
 
     &__bio {
         margin-top: 12vh;
-        font-size: 1.9rem;
+        font-size: 2.1rem;
 
         &>p {
             margin-bottom: 2rem;
         }
     }
 
-    &__photo {
-        margin-top: 10rem;
-        width: 50%;
-        margin-left: auto;
+    &__skills {
+        margin: 15vh 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
 
-        & a {
-            display: block;
+        &-list {
+            width: 48%;
+
+            & h2 {
+                font-size: 5rem;
+                font-family: "Roboto-mono", sans-serif;
+                font-weight: 800;
+                text-transform: uppercase;
+                margin-bottom: 5rem;
+            }
+
+            & li {
+                font-size: 2rem;
+                list-style: inside;
+            }
+        }
+
+        &-photo {
+            width: 48%;
+
+            & a {
+                display: block;
+            }
         }
     }
 }
@@ -50,4 +72,22 @@
     transition: 1.5s all cubic-bezier(0.68, -0.55, 0.3, 1.3);
     transform: translateY(0);
     opacity: 1;
+}
+
+.PageAbout-heading-appear {
+
+    & h1,
+    & h3 {
+        transition: 1.5s opacity cubic-bezier(0.68, -0.55, 0.3, 1.3);
+        opacity: 0;
+    }
+}
+
+.PageAbout-heading-appear-done {
+
+    & h1,
+    & h3 {
+        transition: 1.5s opacity cubic-bezier(0.68, -0.55, 0.3, 1.3);
+        opacity: 1;
+    }
 }

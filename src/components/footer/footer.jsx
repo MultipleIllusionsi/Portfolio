@@ -5,6 +5,17 @@ import "./footer.scss";
 
 const Footer = props => {
   const classes = props.location.pathname === "/" ? "homepage" : "other";
+
+  // const handleClick = async e => {
+  //   e.persist();
+  //   e.preventDefault();
+  //   const path = e.currentTarget.dataset.path;
+  //   // await doSomething();
+  //   setTimeout(() => {
+  //     props.history.push(path);
+  //   }, 1000);
+  // };
+
   return (
     <footer className={`footer ${classes}`}>
       {props.extra && <div>extra</div>}
