@@ -4,6 +4,7 @@ export default [
     preview:
       "https://res.cloudinary.com/multipleillusionsi/image/upload/v1574369570/Galaxy_rupat1.jpg",
     link: "https://galaxy-music.netlify.com/",
+    git_link: "https://github.com/MultipleIllusionsi/Galaxy-music",
     stack: ["HTML5", "CSS3 (SCSS)", "React"],
     describe_one:
       "Modern multipage music portal with a responsive design providing huge opportunities.",
@@ -27,6 +28,7 @@ export default [
     preview:
       "https://res.cloudinary.com/multipleillusionsi/image/upload/v1574369570/BAM_ehaejf.jpg",
     link: "https://multipleillusionsi.github.io/BAM/",
+    git_link: "https://github.com/MultipleIllusionsi/BAM",
     stack: ["HTML5 (Pug)", "CSS3 (SCSS)", "JavaScript", "Parcel"],
     describe_one:
       "Multipage application with a responsive design, lazyloading and full optimization for two professional advertising photographers.",
@@ -50,6 +52,7 @@ export default [
     preview:
       "https://res.cloudinary.com/multipleillusionsi/image/upload/v1574369570/Oblivion_Clothing_ufwnyw.jpg",
     link: "https://oblivionshop.netlify.com/",
+    git_link: "https://github.com/MultipleIllusionsi/Oblivion",
     stack: [
       "HTML5",
       "CSS3 (SCSS)",
@@ -80,6 +83,7 @@ export default [
     preview:
       "https://res.cloudinary.com/multipleillusionsi/image/upload/v1574369570/Charm_kxiqkw.jpg",
     link: "https://multipleillusionsi.github.io/charm/",
+    git_link: "https://github.com/MultipleIllusionsi/charm",
     stack: ["HTML5 (Pug)", "CSS3 (SCSS)", "JavaScript", "Parcel"],
     describe_one:
       "Multipage application with a responsive design, lazyloading and full optimization for a photography agency.",
@@ -103,6 +107,7 @@ export default [
     preview:
       "https://res.cloudinary.com/multipleillusionsi/image/upload/v1574369570/Mountains_tnhzm6.jpg",
     link: "https://multipleillusionsi.github.io/Mountains/",
+    git_link: "https://github.com/MultipleIllusionsi/Mountains",
     stack: ["HTML5", "CSS3 (SCSS)", "JavaScript"],
     describe_one:
       "Landing page with a responsive design, lazyloading and full optimization for a company organizing hiking trips",
@@ -126,6 +131,7 @@ export default [
     preview:
       "https://res.cloudinary.com/multipleillusionsi/image/upload/v1574369570/Surfing_Camp_i7bswv.jpg",
     link: "https://multipleillusionsi.github.io/Surfing-Camp/",
+    git_link: "https://github.com/MultipleIllusionsi/Surfing-Camp",
     stack: ["HTML5", "CSS3 (SCSS)", "JavaScript"],
     describe_one:
       "Landing page with a responsive design, custom animation and full optimization for a surfing company.",
@@ -147,6 +153,7 @@ export default [
     title: "Other",
     preview: "",
     link: "",
+    git_link: "https://github.com/MultipleIllusionsi",
     stack: "",
     describe_one: "Also you can see my other works on my GitHub page",
     describe_two: "",

@@ -41,3 +41,20 @@ a {
   transition: 0.3s all ease-out;
   z-index: 10;
 }
+
+.github-icon {
+  width: 5rem;
+  height: 5rem;
+  // transition: 0.5s all ease-out;
+  // border-radius: 50%;
+
+  // &:hover {
+  //   fill: white;
+  //   background-color: black;
+  // }
+}
+
+.icon {
+  width: 5rem;
+  height: 5rem;
+}

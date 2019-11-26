@@ -23,28 +23,35 @@
 
     &__bio {
         margin-top: 12vh;
-        font-size: 2.1rem;
+        font-size: 2rem;
 
-        &>p {
+        & .text-margin {
             margin-bottom: 2rem;
         }
+
     }
 
-    &__skills {
-        margin: 15vh 0;
+    &__talents {
+        margin: 25vh 0;
         display: flex;
         align-items: center;
         justify-content: space-between;
 
         &-list {
-            width: 48%;
+            width: 55%;
+
+            & .SkillList {
+                margin-bottom: 10rem;
+            }
+
+            & .ToolsList {}
 
             & h2 {
-                font-size: 5rem;
+                font-size: 4rem;
                 font-family: "Roboto-mono", sans-serif;
                 font-weight: 800;
                 text-transform: uppercase;
-                margin-bottom: 5rem;
+                margin-bottom: 2rem;
             }
 
             & li {
@@ -52,12 +59,35 @@
                 list-style: inside;
             }
         }
+    }
 
-        &-photo {
-            width: 48%;
+    &__photo {
+        width: 45%;
+
+        & a {
+            display: block;
+        }
+    }
+
+    &__get-in-touch {
+        margin: 10vh 0;
+
+        & h4 {
+            font-size: 3rem;
+            text-align: center;
+        }
+
+        & .social-list {
+            margin-top: 5vh;
+            display: flex;
+            justify-content: center;
 
             & a {
                 display: block;
+            }
+
+            & li {
+                padding: 0 3rem;
             }
         }
     }

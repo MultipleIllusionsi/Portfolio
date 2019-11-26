@@ -25,6 +25,9 @@
     .link {
         &-wrapper {
             margin: 7.5vh 0;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
 
             & a {
                 display: block;

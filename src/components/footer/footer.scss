@@ -1,8 +1,28 @@
 .footer {
+    &-wrapper {
+        width: 100vw;
+
+        &.homepage {
+            color: black;
+            background: white;
+        }
+
+        &.other {
+            color: white;
+            background: black;
+
+            & .footer-list__item::after {
+                background-color: white;
+            }
+        }
+    }
+
+    max-width: 100rem;
+    margin: 0 auto;
+
     text-transform: uppercase;
     height: 20vh;
     font-size: 3rem;
-    padding: 0 20%;
 
     &-list {
         display: flex;
@@ -34,19 +54,7 @@
         }
     }
 
-    &.homepage {
-        color: black;
-        background: white;
-    }
 
-    &.other {
-        color: white;
-        background: black;
-
-        & .footer-list__item::after {
-            background-color: white;
-        }
-    }
 }
 
 .active-link {

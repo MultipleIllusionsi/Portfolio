@@ -5,6 +5,8 @@ import InitialAnimation from "../../components/InitialAnimation/InitialAnimation
 import listOfWorks from "../../assets/static/listOfWorks";
 import AppearAnimation from "../../components/AppearAnimation/AppearAnimation";
 
+import { ReactComponent as GithubIcon } from "../../assets/github-icon.svg";
+
 import "./IndividualWork.scss";
 
 const IndividualWork = ({ match: { params } }) => {
@@ -13,6 +15,7 @@ const IndividualWork = ({ match: { params } }) => {
     title,
     preview,
     link,
+    git_link,
     stack,
     describe_one,
     describe_two,
@@ -42,8 +45,11 @@ const IndividualWork = ({ match: { params } }) => {
         <img src={image_three} alt="" />
         <img src={image_four} alt="" />
         <div className="link-wrapper">
-          <a target="blank" href={link}>
+          <a target="_blank" rel="noopener noreferrer" href={link}>
             <span className="link-style">Link</span>
+          </a>
+          <a target="_blank" rel="noopener noreferrer" href={git_link}>
+            <GithubIcon className="github-icon" />
           </a>
         </div>
       </div>
