@@ -71,8 +71,8 @@ const About = () => {
             <p className="text-margin">
               Being self-taught, I completed more than 250 hours of courses from
               the best foreign instructors in various fields of development (of
-              which 80% are front-end), and also spent countless hours studying
-              myself.
+              which 80% are front-end), and also spent countless hours learning
+              on my own.
             </p>
             <p>Currently looking for opportunities in Russia.</p>
           </div>
