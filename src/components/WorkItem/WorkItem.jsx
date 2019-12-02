@@ -4,21 +4,27 @@ import { Link } from "react-router-dom";
 import { ReactComponent as ArrowIcon } from "../../assets/arrow.svg";
 import "./WorkItem.scss";
 
-const WorkItem = ({ data }) => {
-  console.log("props from workitem", data);
-  return (
-    <li className="WorkItem">
-      <Link to={`/work/${data.title}`}>
+const WorkItem = ({ data: { title, preview, nonPage, link } }) => (
+  <li className="WorkItem">
+    {nonPage ? (
+      <a target="_blank" rel="noopener noreferrer" href={link}>
         <div className="WorkItem-content">
-          <p className="WorkItem-content__text">{data.title}</p>
+          <p className="WorkItem-content__text">{title}</p>
+          <ArrowIcon />
+        </div>
+      </a>
+    ) : (
+      <Link to={`/work/${title}`}>
+        <div className="WorkItem-content">
+          <p className="WorkItem-content__text">{title}</p>
           <ArrowIcon />
           <div className="WorkItem-content__img">
-            <img src={data.preview} alt="" />
+            <img src={preview} alt={`${title}`} />
           </div>
         </div>
       </Link>
-    </li>
-  );
-};
+    )}
+  </li>
+);
 
 export default WorkItem;

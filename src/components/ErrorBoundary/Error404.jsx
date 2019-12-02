@@ -4,14 +4,9 @@ import "./Error404.scss";
 
 const Error404 = () => (
   <div className="error-image-overlay">
-    <div
-      className="error-image-container"
-      style={{
-        backgroundImage: `url("https://i.imgur.com/lKJiT77.png")`
-      }}
-    >
+    <div className="error-image-container">
       <div className="error-image-text">
-        A Dog ate this page :( <br /> Please refresh page
+        A Dog ate this page :( <br /> Please return to the homepage and refresh
       </div>
     </div>
   </div>

@@ -40,7 +40,7 @@ const About = () => {
   console.log("render from about page");
   return (
     <>
-      <div onScroll={listenToScroll} className="page-about">
+      <div onScroll={listenToScroll} className="page-about page-width">
         <AppearAnimation classes={"PageAbout-heading"} timeout={0}>
           <div
             style={{
@@ -94,10 +94,10 @@ const About = () => {
                 <h2>Tools</h2>
                 <ul>
                   <li>HTML5 (Pug)</li>
-                  <li>CSS3 (SCSS), CSS in JS</li>
+                  <li>CSS3 (SCSS), Bootstrap, CSS in JS</li>
                   <li>JavaScript (up to ES10)</li>
-                  <li>React (incl. knowledge of the latest updates)</li>
-                  <li>Redux (as well Async Redux)</li>
+                  <li>React (incl. recent updates)</li>
+                  <li>Redux </li>
                   <li>Firebase</li>
                   <li>Git, Github</li>
                   <li>Webpack, NPM, Parcel</li>

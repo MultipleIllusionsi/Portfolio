@@ -13,7 +13,6 @@ const IndividualWork = ({ match: { params } }) => {
   let data = listOfWorks.filter(work => work.title === params.title);
   const {
     title,
-    preview,
     link,
     git_link,
     stack,
