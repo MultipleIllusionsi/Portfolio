@@ -9,6 +9,10 @@
     z-index: 10000;
     transition: 1.5s all ease-in;
 
+    @media only screen and (hover: none) {
+        width: 100vw;
+    }
+
     &.full {
         width: 100vw;
     }
