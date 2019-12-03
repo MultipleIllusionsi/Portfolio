@@ -1,3 +1,5 @@
+@import "../../assets/sass/mixins.scss";
+
 .WorkItem {
     border-bottom: 0.5px solid rgba(0, 0, 0, 0.5);
     height: 20vh;
@@ -9,6 +11,7 @@
     &:hover &-content__img {
         transform: none;
         opacity: 1;
+
     }
 
     &:hover &-content {
@@ -43,6 +46,10 @@
             font-family: "Roboto-mono", sans-serif;
             font-weight: 800;
             z-index: 10;
+
+            @include response(phone) {
+                font-size: 3rem;
+            }
         }
 
         &__img {

@@ -5,6 +5,7 @@ import Footer from "../../components/footer/footer";
 import AppearAnimation from "../../components/AppearAnimation/AppearAnimation";
 import PersonalPhoto from "../../assets/personal-photo.jpg";
 
+import { ReactComponent as ArrowIcon } from "../../assets/arrow.svg";
 import { ReactComponent as GithubIcon } from "../../assets/github-icon.svg";
 import { ReactComponent as LinkedinIcon } from "../../assets/linkedin-icon.svg";
 import { ReactComponent as VkIcon } from "../../assets/vk-icon.svg";
@@ -25,27 +26,24 @@ const About = () => {
   const listenToScroll = () => {
     const currScroll =
       document.body.scrollTop || document.documentElement.scrollTop;
-    const height =
-      document.documentElement.scrollHeight -
-      document.documentElement.clientHeight;
-    const scrolledPercent = currScroll / height;
-
-    if (scrolledPercent > 0.5) {
+    if (currScroll > 300) {
       return;
     }
-
-    setScroll(scrolledPercent);
+    // console.log("currScroll", currScroll);
+    setScroll(currScroll);
   };
 
-  console.log("render from about page");
   return (
     <>
       <div onScroll={listenToScroll} className="page-about page-width">
+        <Link to="/">
+          <ArrowIcon />
+        </Link>
         <AppearAnimation classes={"PageAbout-heading"} timeout={0}>
           <div
             style={{
-              transform: `translateY(${scroll * 400}%)`,
-              opacity: `${1 - scroll * 2.3}`
+              transform: `translateY(${scroll * 0.8}%)`,
+              opacity: `${1 - scroll * 0.004}`
             }}
             className={`page-about__headings`}
           >
@@ -106,9 +104,7 @@ const About = () => {
             </div>
 
             <div className="page-about__photo">
-              <Link to="/">
-                <img src={PersonalPhoto} alt="sergey zakharov" />
-              </Link>
+              <img src={PersonalPhoto} alt="sergey zakharov" />
             </div>
           </section>
         </AppearAnimation>

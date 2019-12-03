@@ -14,7 +14,11 @@ const Work = () => (
       <InitialAnimation color="black" />
       <ul className="work-list">
         {listOfWorks.map((work, index) => (
-          <AppearAnimation timeout={600 + index * 200} classes={"PageWork"}>
+          <AppearAnimation
+            key={index}
+            timeout={600 + index * 200}
+            classes={"PageWork"}
+          >
             <WorkItem key={index} data={work} />
           </AppearAnimation>
         ))}

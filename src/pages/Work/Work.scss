@@ -1,11 +1,21 @@
+@import "../../assets/sass/mixins.scss";
+
 .page-work {
-    padding-top: 15rem;
+    padding-top: 15vh;
     overflow: hidden;
+
+    @include response(phone) {
+        padding-top: 7vh;
+    }
 
     & .work-list {
         max-width: 120rem;
         min-width: 32rem;
         margin: 0 auto 15vh;
+
+        @include response(phone) {
+            margin: 0 auto 7vh;
+        }
     }
 }
 

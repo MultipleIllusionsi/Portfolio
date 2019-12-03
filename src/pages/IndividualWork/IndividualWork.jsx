@@ -1,10 +1,12 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import Footer from "../../components/footer/footer";
 import InitialAnimation from "../../components/InitialAnimation/InitialAnimation";
 import listOfWorks from "../../assets/static/listOfWorks";
 import AppearAnimation from "../../components/AppearAnimation/AppearAnimation";
 
+import { ReactComponent as ArrowIcon } from "../../assets/arrow.svg";
 import { ReactComponent as GithubIcon } from "../../assets/github-icon.svg";
 
 import "./IndividualWork.scss";
@@ -27,6 +29,9 @@ const IndividualWork = ({ match: { params } }) => {
     <div className="IndividualWork-page">
       <InitialAnimation color="white" size="full" />
       <div className="page-content">
+        <Link to="/work">
+          <ArrowIcon />
+        </Link>
         <AppearAnimation classes={"IndividualWork"} timeout={800}>
           <h1>{title}</h1>
         </AppearAnimation>
