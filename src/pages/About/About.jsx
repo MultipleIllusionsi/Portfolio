@@ -29,7 +29,6 @@ const About = () => {
     if (currScroll > 300) {
       return;
     }
-    // console.log("currScroll", currScroll);
     setScroll(currScroll);
   };
 
