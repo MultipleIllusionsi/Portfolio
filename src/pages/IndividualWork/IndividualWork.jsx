@@ -19,12 +19,12 @@ const IndividualWork = ({ match: { params } }) => {
     git_link,
     stack,
     describe_one,
-    describe_two,
     image_one,
     image_two,
     image_three,
     image_four
   } = data[0];
+
   return (
     <div className="IndividualWork-page">
       <InitialAnimation color="white" size="full" />

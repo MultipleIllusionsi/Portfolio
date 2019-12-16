@@ -8,7 +8,6 @@ export default [
     stack: ["HTML5", "CSS3 (SCSS)", "React"],
     describe_one:
       "Modern multipage music portal with a responsive design providing huge opportunities.",
-    describe_two: "",
     image_one:
       "https://res.cloudinary.com/multipleillusionsi/image/upload/v1574453193/individual/Galaxy-1_qmt6lr.jpg",
     image_two:
@@ -27,7 +26,6 @@ export default [
     stack: ["HTML5 (Pug)", "CSS3 (SCSS)", "JavaScript", "Parcel"],
     describe_one:
       "Multipage application with a responsive design, lazyloading and full optimization for two professional advertising photographers.",
-    describe_two: "",
     image_one:
       "https://res.cloudinary.com/multipleillusionsi/image/upload/v1574453193/individual/BAM-1_ynpa0t.jpg",
     image_two:
@@ -53,7 +51,6 @@ export default [
     ],
     describe_one:
       "E-commerce multipage application with connected database and payment system.",
-    describe_two: "",
     image_one:
       "https://res.cloudinary.com/multipleillusionsi/image/upload/v1574453194/individual/Oblivion-1_rilemz.jpg",
     image_two:
@@ -72,7 +69,6 @@ export default [
     stack: ["HTML5 (Pug)", "CSS3 (SCSS)", "JavaScript", "Parcel"],
     describe_one:
       "Multipage application with a responsive design, lazyloading and full optimization for a photography agency.",
-    describe_two: "",
     image_one:
       "https://res.cloudinary.com/multipleillusionsi/image/upload/v1574453193/individual/Charm-1_jxjrpm.jpg",
     image_two:
@@ -91,7 +87,6 @@ export default [
     stack: ["HTML5", "CSS3 (SCSS)", "JavaScript"],
     describe_one:
       "Landing page with a responsive design, lazyloading and full optimization for a company organizing hiking trips",
-    describe_two: "",
     image_one:
       "https://res.cloudinary.com/multipleillusionsi/image/upload/v1574453194/individual/Mountains-1_ts1h2y.jpg",
     image_two:
@@ -110,7 +105,6 @@ export default [
     stack: ["HTML5", "CSS3 (SCSS)", "JavaScript"],
     describe_one:
       "Landing page with a responsive design, custom animation and full optimization for a surfing company.",
-    describe_two: "",
     image_one:
       "https://res.cloudinary.com/multipleillusionsi/image/upload/v1574453195/individual/SurfingCamp-1_ssdnrv.jpg",
     image_two:

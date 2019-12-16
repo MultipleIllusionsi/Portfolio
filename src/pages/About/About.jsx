@@ -143,6 +143,15 @@ const About = () => {
                 <VkIcon className="icon" />
               </a>
             </li>
+            <li>
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://drive.google.com/file/d/1Fx25pv19YYzhX6UQV2SpTlySNu32j7x_/view"
+              >
+                CV
+              </a>
+            </li>
           </ul>
         </section>
       </div>
